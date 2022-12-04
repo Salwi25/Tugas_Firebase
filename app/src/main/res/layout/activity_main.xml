@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/name_edittext"
+        android:hint="Name"
+        android:minHeight="48dp"
+        />
+
+    <EditText
+        android:id="@+id/address_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Address"
+        android:minHeight="48dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="10dp">
+
+        <Button
+            android:id="@+id/insert_student_btn"
+            android:layout_width="194dp"
+            android:layout_height="wrap_content"
+            android:text="ADD STUDENTS DATA"
+            android:layout_marginEnd="5dp"/>
+        <Button
+            android:layout_width="194dp"
+            android:layout_height="wrap_content"
+            android:text="ADD TEACHERS DATA"
+            android:id="@+id/insert_teacher_btn"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="10dp">
+
+        <Button
+            android:layout_width="194dp"
+            android:layout_height="wrap_content"
+            android:text="READ STUDENTS LATEST DATA"
+            android:id="@+id/read_student_btn"
+            android:layout_marginEnd="5dp"
+            />
+        <Button
+            android:layout_width="194dp"
+            android:layout_height="wrap_content"
+            android:text="READ LATEST TEACHERS DATA"
+            android:id="@+id/read_teacher_btn"
+            />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/update_name_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/update_address_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Address"
+        android:minHeight="48dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="10dp">
+        <Button
+            android:layout_width="194dp"
+            android:layout_height="wrap_content"
+            android:text="UPDATE STUDENTS DATA"
+            android:id="@+id/update_student_btn"
+            android:layout_marginEnd="5dp"
+            />
+        <Button
+            android:layout_width="194dp"
+            android:layout_height="wrap_content"
+            android:text="UPDATE TEACHERS DATA"
+            android:id="@+id/update_teacher_btn"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="10dp">
+
+        <Button
+            android:layout_width="194dp"
+            android:layout_height="wrap_content"
+            android:text="DELETE STUDENTS DATA"
+            android:id="@+id/delete_student_btn"
+            android:layout_marginEnd="5dp"
+            />
+        <Button
+            android:layout_width="194dp"
+            android:layout_height="wrap_content"
+            android:text="DELETE TEACHERS DATA"
+            android:id="@+id/delete_teacher_btn"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>
