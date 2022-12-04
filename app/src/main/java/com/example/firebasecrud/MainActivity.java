@@ -118,8 +118,8 @@ public class MainActivity extends AppCompatActivity {
                 if (snapshot.hasChildren()) {
                     for (DataSnapshot currentData : snapshot.getChildren()) {
                         key1 = currentData.getKey();
-                        mStudent.setNameStudents(currentData.child("name").getValue().toString());
-                        mStudent.setAddressStudents(currentData.child("address").getValue().toString());
+                        mStudent.setNameStudents(currentData.child("nameStudents").getValue().toString());
+                        mStudent.setAddressStudents(currentData.child("addressStudents").getValue().toString());
                     }
                 }
 
@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
         updatedStudentsData.setAddressStudents(mUpdatedAddressEditText.getText().toString());
 
         mDatabaseReference1.child(key1).setValue(updatedStudentsData);
-
+        Toast.makeText(MainActivity.this, "Students Data has been updated!", Toast.LENGTH_SHORT).show();
     }
 
     private void deletedStudentsData() {
@@ -151,6 +151,7 @@ public class MainActivity extends AppCompatActivity {
         updatedStudentsData.setAddressStudents(mUpdatedAddressEditText.getText().toString());
 
         mDatabaseReference1.child(key1).removeValue();
+        Toast.makeText(MainActivity.this, "Students Data has been deleted!", Toast.LENGTH_SHORT).show();
     }
 
     //Function for teachers button
@@ -159,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
          String name = mNameEditText.getText().toString();
          String address = mAddressEditText.getText().toString();
          if (name !="" && address != ""){
-             newTeacher.setNameteachers(name);
+             newTeacher.setNameTeachers(name);
              newTeacher.setAddressTeachers(address);
 
 
@@ -176,12 +177,12 @@ public class MainActivity extends AppCompatActivity {
                 if (snapshot.hasChildren()) {
                     for (DataSnapshot currentData : snapshot.getChildren()) {
                         key2 = currentData.getKey();
-                        mTeacher.setNameteachers(currentData.child("nameteachers").getValue().toString());
+                        mTeacher.setNameTeachers(currentData.child("nameTeachers").getValue().toString());
                         mTeacher.setAddressTeachers(currentData.child("addressTeachers").getValue().toString());
                     }
                 }
 
-                mUpdatedNameEditText.setText(mTeacher.getNameteachers());
+                mUpdatedNameEditText.setText(mTeacher.getNameTeachers());
                 mUpdatedAddressEditText.setText(mTeacher.getAddressTeachers());
                 Toast.makeText(MainActivity.this, "Teachers Data has been shown!", Toast.LENGTH_SHORT).show();
             }
@@ -195,17 +196,19 @@ public class MainActivity extends AppCompatActivity {
 
      private void updateTeachersData(){
          Teacher updatedTeachersData = new Teacher();
-         updatedTeachersData.setNameteachers(mUpdatedNameEditText.getText().toString());
+         updatedTeachersData.setNameTeachers(mUpdatedNameEditText.getText().toString());
          updatedTeachersData.setAddressTeachers(mUpdatedAddressEditText.getText().toString());
 
          mDatabaseReference2.child(key2).setValue(updatedTeachersData);
+         Toast.makeText(MainActivity.this, "Teachers Data has been updated!", Toast.LENGTH_SHORT).show();
      }
 
      private void deleteTeachersData(){
          Teacher updatedTeachersData = new Teacher();
-         updatedTeachersData.setNameteachers(mUpdatedNameEditText.getText().toString());
+         updatedTeachersData.setNameTeachers(mUpdatedNameEditText.getText().toString());
          updatedTeachersData.setAddressTeachers(mUpdatedAddressEditText.getText().toString());
 
          mDatabaseReference2.child(key2).removeValue();
+         Toast.makeText(MainActivity.this, "Teachers Data has been deleted!", Toast.LENGTH_SHORT).show();
      }
 }

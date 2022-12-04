@@ -1,15 +1,15 @@
 package com.example.firebasecrud;
 
 public class Teacher {
-    private String nameteachers;
+    private String nameTeachers;
     private String addressTeachers;
 
-    public String getNameteachers() {
-        return nameteachers;
+    public String getNameTeachers() {
+        return nameTeachers;
     }
 
-    public void setNameteachers(String nameteachers) {
-        this.nameteachers = nameteachers;
+    public void setNameTeachers(String nameTeachers) {
+        this.nameTeachers = nameTeachers;
     }
 
     public String getAddressTeachers() {
